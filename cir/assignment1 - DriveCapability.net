@@ -1,0 +1,13 @@
+* C:\Users\tomsa\Documents\SturcturedElectronics2021\Stuctured Electronic Design - Design Team 3\cir\assignment1 - DriveCapability.asc
+M1 D G 0 0 C18nmos l={L} w={W} m={M}
+Vg G 0 0
+Vds D out {V_DS}
+I2 0 D {I_D}
+R_BF out Vout 50
+R_Out 0 Vout {R_L}
+;.dc Vg 0.2 1.6 0.01
+.param W=50u L=0.18u M=12
+.param V_DS=0.632 I_D=6.4m R_L=50
+.lib CMOS18TT.lib
+.backanno
+.end

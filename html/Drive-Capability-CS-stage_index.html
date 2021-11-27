@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Drive Capability CS-stage"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Drive Capability CS-stage</h1></div>
+<h2>Table of contents</h2><ol><figure><img src="img/assignment1 - DriveCapability.svg" alt="" style="width:900px">
+</figure>
+<h2>Drive capability of a CS stage</h2>
+<p>The most uncomplicated method of creating an amplifier is to use a single CS stage. However, in order to test if this one stage is able to satisfy the requirements, some drive capability and noise simulations have to be done. The stage has to be able to drive the load without adding too much noise.</p>
+<p>First, the correct biasing needs to be determined to fulfil the design requirements. The active antenna needs to deliver $0dbm$ ($1mW$) into $50 \Omega$. The RMS voltage should be $V_{RMS}=\sqrt{P \cdot R} = 233 mV$. Now the peak value is obtained by multiplication with the crest factor $V_{PP}=\sqrt{2}\cdot 233mV = 316 mV$.</p>
+<p>Thus the CS stage needs to drive $316 mV$ at the output. The first method is using brute force by placing an additional $50\Omega$ resistor in series witth the amplifier output. Then the total impedace seen at the output would be $100\Omega$. In order to fullfil the $316mV$ requirement we need a current of $$I_D= 316mV/50\Omega pprox 6.4mA$$</p>
+<!-- INSERT --></ol>
+<div id="footnote">
+<p>Go to <a href="index.html">index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2021-11-27 16:19:56</p>
+</div></body></html>
