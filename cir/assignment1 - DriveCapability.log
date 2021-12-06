@@ -1,44 +1,12 @@
-Circuit: * E:\Universiteit\Master\7 Q2 - 2021\EE4109 - Structured Electronic Design\EE4109-Structured-Electronic-Design\cir\assignment1 - DriveCapability.asc
-
-Ignoring BSIM parameter XL
-Ignoring BSIM parameter XW
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
-.step m=1
-.step m=2
-.step m=3
-.step m=4
-.step m=5
-.step m=6
-.step m=7
-.step m=8
-.step m=9
-.step m=10
-.step m=11
-.step m=12
-.step m=13
-.step m=14
-.step m=15
-.step m=16
-.step m=17
-.step m=18
-.step m=19
-.step m=20
-
-Date: Mon Dec 06 21:54:56 2021
-Total elapsed time: 0.531 seconds.
-
-tnom = 27
-temp = 27
-method = trap
-totiter = 290
-traniter = 0
-tranpoints = 0
-accept = 0
-rejected = 0
-matrix size = 6
-fillins = 1
-solver = Normal
-Matrix Compiler1:      12 opcodes  0.1/[0.1]/0.1
-Matrix Compiler2: off  [0.0]/0.1/0.1
+Questionable use of curly braces in "g1 out 0 n001 0 {g_m}"
+    Error: undefined symbol in: "[g_m]"
+Questionable use of curly braces in "c1 n001 0 {c_gs+c_gb}"
+    Error: undefined symbol in: "[c_gs]+c_gb"
+Questionable use of curly braces in "c2 out 0 {c_db}"
+    Error: undefined symbol in: "[c_db]"
+Questionable use of curly braces in "c3 n001 out {c_dg}"
+    Error: undefined symbol in: "[c_dg]"
+Questionable use of curly braces in "r3 out 0 {1/g_o}"
+    Error: undefined symbol in: "1/[g_o]"
+Circuit: "Drive Capability CS-stage"
 

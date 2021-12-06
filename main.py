@@ -23,3 +23,4 @@ prj = initProject('Active Antenna Design - Design group 3')
 #Run all assignments sequentially.
 import DesignOverview
 import Assignment1
+import Assignment2

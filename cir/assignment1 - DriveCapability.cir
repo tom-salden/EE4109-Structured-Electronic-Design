@@ -1,4 +1,4 @@
-"Drive Capability CS-stage"
+"Assignment 1 - Drive Capability CS-stage"
 * C:\Users\tomsa\Documents\SturcturedElectronics2021\Chapter5\SLiCAP\cir\CSstageComponents.asc
 R1 out 0 {R_L}
 I1 0 N001 I value=0 dc=0 dcvar=0 noise=0
