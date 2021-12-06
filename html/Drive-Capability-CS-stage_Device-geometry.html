@@ -1,0 +1,21 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Device geometry"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Device geometry</h1></div>
+<h2>Device geometry determination</h2>
+<p>After finding the minimum drain voltage and current, the geometry of the device needs to be investigated. To start off, a lenght of $L=180nm$ is suggested as this is the minimal length of the transistor. Now, in order to select the width (or the multiplication factor M), the output characteristics for varying M with $W= 50\mu m$ can be plotted:</p>
+<figure><img src="img/assignment1 - Multiplyer.svg" alt="" style="width:900px">
+</figure>
+<p>From these result the effect of increasing the width of the transistor becomes visible. Increasing the width will increase the current through the transistor and thus the transconductance gm will also increase. From the obtained figure we can see that for low values such as $M=1$ the circuit is not able to achieve the desired output voltage driving capabilities. For $M>12$ we obtain $V_{out} \geq 620 mV$. Which seems to be sufficient for the design.</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Drive-Capability-CS-stage_index.html">Drive-Capability-CS-stage_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2021-12-06 23:15:27</p>
+</div></body></html>
