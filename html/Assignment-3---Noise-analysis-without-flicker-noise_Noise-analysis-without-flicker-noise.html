@@ -1,0 +1,36 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Noise analysis without flicker noise"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Noise analysis without flicker noise</h1></div>
+<p>The values are the same as that of the previous assignment</p>
+<figure><img src="img/Assignment3.png" alt="" style="width:700px">
+</figure>
+<p>The inversion coefficient $IC$ equals: 0.01251</p>
+<p>The critical inversion coefficient $IC_{CRIT}$ equals: 12.76</p>
+<p>The transconductance $g_m$ equals: 0.0001290</p>
+<h2>Source referred noise</h2>
+<p>The spectrum of the source-referred voltage noise [V/rt(Hz)] is: 9.873e-9</p>
+<p>Here is the source refered noise.</p>
+<figure><img src="img/CScapNoiseVspectrum.svg" alt="" style="width:500px">
+</figure>
+<p>But we want to know for which width we still have more noise than the minimum requirements.</p>
+<p>At the minimum, we need to have less noise than $2.5$ nVHz$^{-0.5}$ (See the antenna requirements)</p>
+<p>To calculate the minimum width, we plot the source refered input noise vs the width of the device. Note that the device is kept in critical inversion</p>
+<figure><img src="img/Vni_W.svg" alt="" style="width:500px">
+</figure>
+<p>From this we can read out that we have a showstopper. If $W < 7 \mu m$, the design will fail nonetheless. However, for wider widths the noise performance meets the requirements. </p>
+<p>The optimum noise performance would be achieved if $C_s = c_{iss}$, which would result in a width of 2.5mm</p>
+<p>For our current W/L ratio, we obtain a $C_{iss}$ of $8.7 \cdot 10^{-14}$ F</p>
+<p>Although the width of 2.5mm is the optimum, such a large value is not needed for the noise requirements</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Assignment-3---Noise-analysis-without-flicker-noise_index.html">Assignment-3---Noise-analysis-without-flicker-noise_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2021-12-12 18:04:57</p>
+</div></body></html>

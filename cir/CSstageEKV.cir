@@ -1,5 +1,5 @@
 "Assignment 2 - Modelling the transistor"
-* E:\Universiteit\Master\7 Q2 - 2021\EE4109 - Structured Electronic Design\EE4109-Structured-Electronic-Design\cir\CSstageEKV.asc
+* E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\CSstageEKV.asc
 R1 out 0 {R_L}
 XU1 out in 0 0 CMOS18N W={W} L={L} ID={ID}
 I1 0 in I value=0 dc=0 dcvar=0 noise=0

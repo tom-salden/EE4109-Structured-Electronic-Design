@@ -1,0 +1,8 @@
+"Assignment 3 - Noise analysis without flicker noise"
+V1 N001 0 V value=0 dc=0 dcvar=0 noise=0
+C1 N002 N001 {C_s}
+XU1 N002 0 out NM18_noise ID={ID} IG={IG} W={W}*{M} L={L}
+.param ID=5u IG=0 W=50u L=180n C_s=5p M=2
+.lib SLiCAP.lib
+.backanno
+.end

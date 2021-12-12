@@ -27,5 +27,6 @@ prj = initProject('Active Antenna Design - Design group 3')
 import DesignOverview
 import Assignment1
 import Assignment2
-#import Assignment3
+import Assignment3NoiseWithoutFlicker
+import Assignment3NoiseWithFlicker
 import Assignment4
