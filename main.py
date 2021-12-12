@@ -4,6 +4,9 @@ EE4109 - Structured Electronic Design
 Design group 3
 
 """
+#Clean up the html folder, so no extra files persist
+import shutil
+shutil.rmtree('html')
 
 #Clean up variables and console to get a 'clean' run
 try:
@@ -24,3 +27,5 @@ prj = initProject('Active Antenna Design - Design group 3')
 import DesignOverview
 import Assignment1
 import Assignment2
+#import Assignment3
+import Assignment4
