@@ -1,6 +1,3 @@
-from SLiCAP import *
-
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -102,5 +99,3 @@ text2html('A plot of the total input flicker noise is shown below')
 fig2html(fig_flicker,  500)
 
 text2html('Using this information, we can conclude that the current technology is not a showstopper for the noise requirements')
-
-

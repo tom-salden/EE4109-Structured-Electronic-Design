@@ -20,14 +20,13 @@ except:
 from SLiCAP import *
 prj = initProject('Active Antenna Design - Design group 3')
 
-#Define global parameters used throughout the desing
-
+#Import global parameters used throughout the desing
+import globalVariables
 
 #Run all assignments sequentially.
 import DesignOverview
 import Assignment1
 import Assignment2
-import Assignment3NoiseWithoutFlicker
-import Assignment3NoiseWithFlicker
+import Assignment3
 import Assignment4
 import Assignment5
