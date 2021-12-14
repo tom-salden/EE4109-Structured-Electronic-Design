@@ -7,5 +7,5 @@ Created on Tue Dec 14 17:25:55 2021
 #Define global parameters used throughout the desing
 
 global l, Ca
-l = 0.5
-Ca = 10e-12
+L_A = 0.5
+C_A = 10e-12

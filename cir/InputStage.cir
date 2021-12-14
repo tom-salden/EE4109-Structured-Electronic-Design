@@ -1,0 +1,10 @@
+"Assignment 5 - Input stage design"
+* E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\InputStage.asc
+XU1 N002 0 out NM18_noise ID={ID} IG={IG} W={W} L={L}
+C1 N002 P001 {C_A}
+V1 N001 0 V value=0 dc=0 dcvar=0 noise=0
+E1 P001 0 N001 0 {L_A}
+C2 0 N002 {C_f}
+.lib SLiCAP.lib
+.backanno
+.end

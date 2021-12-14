@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="Language" content="English"/>
+<title>"Assignment 5 - Input stage design"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Assignment 5 - Input stage design</h1></div>
+<h2>Table of contents</h2><ol><p>Like mentioned in the requirements section, the noise is predominantly caused by the input stage of the amplifier. Since this amplifier will consist of two stages, the first will be investigated for its noise performance. For this amplifier, a differential pair is chosen as an input stage. Even though a differential pair is different from a single CS stage, its noise performance can be derrived from the performance of a single-CS stage.</p>
+<p>If a differential pair has transistors with twice the width of a single-CS stage and if the drain current through the differential pair is twice as large as the drain current of a single CS-stage, the noise characteristic of both devices are identical. Therefore, the noise characteristics of a single-CS stage is simulated. When the differential pair is implemented, the width of the transistors will be doubled and the pair will be biased so the drain current is twice as large as the noise performance results will give. The following figure shows the model used for noise-based calculations</p>
+<figure><img src="img/CS_noise.svg" alt="" style="width:800px">
+</figure>
+<h2>Spectral noise requirements</h2>
+<p>The requirements give a limit on the antenna-referred spectral noise density. At higher frequencies, this limit is constant, but at lower frequencies, this limit increases. The increment follows a $1/f^2$ characteristic. The frequency at which the frequency independent characteristic takes over from the frequency dependent characteristic is at: $$f_l = 200 [kHz]$$ This frequency is the corner frequency of the noise and is located at the point where the 1/f noise equals the floor noise.</p>
+<h2>Optimal noise performance</h2>
+<p>Since the input stage is driven from a capacitive voltage source, there is an optimum in noise performance. This optimum is found when the input capacitance of the stage $c_{iss}$ equals the source capacitance $C_s$. In this case, the source capacitance equals: $C_s = C_A + C_f$. Since $C_f = C_A \ell$, $C_s = C_A (1+\ell)$ and therefore the optimum is found when $$c_{iss} = C_A (1+\ell)$$</p>
+<!-- INSERT --></ol>
+<div id="footnote">
+<p>Go to <a href="index.html">index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2021-12-14 23:52:16</p>
+</div></body></html>
