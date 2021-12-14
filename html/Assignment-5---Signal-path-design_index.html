@@ -12,13 +12,23 @@
 <p>To keep a reasonable amount of poles and zeros to work with, a 2-stage amplifier will be considered. Now only the type of stages will have to be determined.</p>
 <p>The result from the noise analysis states that CMOS technology can be used to meet the requirements. So much that there is still some room to play with the transistor parameters. Therefore, a CS-stage will do. To increase power efficiency and to suppress even functions, however, an anti-series stage can be substituded. Since the anti-series stage is able to generate the same level of noise as a CS-stage (with twice as wide transistors and a twice the drain current), the model for a CS-stage will be used in the noise analysis. Later on, during transient analysis, this model will be replaced with a complementary parallel circuit.</p>
 <p>The output stage is the next stage to determine. Again, from the previous assignments, the result is that the CMOS technology is able to meet the drive requirements. Again, a CS-stage can be used. However, due to a higher power efficiency, a complementary parallel stage (push-pull stage) will be considered.</p>
-<p>A convenient addition to choosing these two topologies is that the output of this two-stage amplifier is inverted in comparision to the input. The reason is that the differential pair inverts the voltage. This means that the output of the stages could directly drive a negative-feedback network.</p>
+<p>A convenient addition to choosing these two topologies is that the output of this two-stage amplifier is inverted in comparision to the input. The reason is that the push-pull stage inverts the signal while the differential pair does not inver the signal. This means that the output of the stages could directly drive a negative-feedback network.</p>
 <h2>Feedback topology</h2>
-<p>Next to the amplifier, itself, negative feedback can be decided. Advantages of using negative feedback are that </p>
+<p>Next to the amplifier itself, negative feedback can be added. Advantages of using negative feedback are that the gain can be controlled precisely. In addition, choosing the correct feedback enables the amplifier to be resilient to ESD, which is one of the requirements.</p>
+<p>Like determined in the requirements, the innput antenna can be seen as an ideal voltage source with a capacitor in series to it. This means that either the voltage or the current of the input signal can be used. Next to the input, the output impedance of the amplifier should be fixed. Therefore, parameters A and B or C and D should be fixed.</p>
+<p>For the reason of simplicity and ESD protection, a single feedback loop is chosen and implemented as a capacitor from the output of the controller to the input of the controller, like shown in the following figure. Here, the parameters C and D are fixed.</p>
+<p>The total active antenna should have a gain of 1, so the value of the capacitor should have the value of $\ell * C_A$, so 0.5*1e-11 = 5.0 pF.</p>
+<figure><img src="img/topology.svg" alt="" style="width:800px">
+</figure>
+<h2>Total signal path topology</h2>
+<p>Now the different stages have been determined and the type of feedback has been chosen, the signal path topology is known. This signal path topology is unbiased still, but the general structure of the active amplifier is known.</p>
+<p>The amplifier consists of a differential pair as the input stage and a push-pull stage at the output. In addition, a capacitor is routed from the output to the input to create negative feedback. This is shown in the following figure.</p>
+<figure><img src="img/signalPath.svg" alt="" style="width:800px">
+</figure>
 <!-- INSERT --></ol>
 <div id="footnote">
 <p>Go to <a href="index.html">index</a></p>
 <p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
 <p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
-<p>Last project update: 2021-12-14 17:30:46</p>
+<p>Last project update: 2021-12-14 22:56:20</p>
 </div></body></html>
