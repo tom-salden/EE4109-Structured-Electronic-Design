@@ -29,4 +29,5 @@ import Assignment1
 import Assignment2
 import Assignment3
 import Assignment4
-import Assignment5
+import Assignment5_signalPathDesign
+import Assignment5_inputStage

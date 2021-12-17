@@ -12,13 +12,23 @@
 <figure><img src="img/CS_noise.svg" alt="" style="width:800px">
 </figure>
 <h2>Spectral noise requirements</h2>
-<p>The requirements give a limit on the antenna-referred spectral noise density. At higher frequencies, this limit is constant, but at lower frequencies, this limit increases. The increment follows a $1/f^2$ characteristic. The frequency at which the frequency independent characteristic takes over from the frequency dependent characteristic is at: $$f_l = 200 [kHz]$$ This frequency is the corner frequency of the noise and is located at the point where the 1/f noise equals the floor noise.</p>
+<p>The requirements give a limit on the antenna-referred spectral noise density. At higher frequencies, this limit is constant, but at lower frequencies, this limit increases. The increment follows a $1/f^2$ characteristic. The frequency at which the frequency independent characteristic takes over from the frequency dependent characteristic is at: $$f_{\ell} = 200 [kHz]$$ This frequency is the corner frequency of the noise and is located at the point where the 1/f noise equals the floor noise.</p>
 <h2>Optimal noise performance</h2>
-<p>Since the input stage is driven from a capacitive voltage source, there is an optimum in noise performance. This optimum is found when the input capacitance of the stage $c_{iss}$ equals the source capacitance $C_s$. In this case, the source capacitance equals: $C_s = C_A + C_f$. Since $C_f = C_A \ell$, $C_s = C_A (1+\ell)$ and therefore the optimum is found when $$c_{iss} = C_A (1+\ell)$$</p>
-<!-- INSERT --></ol>
+<p>Since the input stage is driven from a capacitive voltage source, there is an optimum in noise performance. This optimum is found when the input capacitance of the stage $c_{iss}$ equals the source capacitance $C_s$. In this case, the source capacitance equals: $C_s = C_A + C_F$. Since $C_F = C_A \ell$, $C_s = C_A (1+\ell)$ and therefore the optimum is found when $$c_{iss} = C_A (1+\ell)$$</p>
+<h2>Testing for feasibility</h2>
+<p>Since there is an optimum in noise performance, a test can be done if the optimal design in terms of noise is still within the scope of the requirements. If this is the case, the design can continue and tweaks can be made to this first stage.</p>
+<p>After evaluating the expressions, the following design equation has to be valid for the stage to fall within noise requirements: $$\dfrac{3\cdot f_{\ell} \cdot C_s \cdot S_{v,floor}}{8 \cdot KF} > 1$$ Here, KF is a parameter that is defined by the technology of the transistor and $S_{v,floor}$ is the spectral density of the input-referred voltage noise of the active antenna. Like displayed in the section Design Overview, this noise floor equals:</p>
+\begin{equation}
+S_{floor}=6.25 \cdot 10^{-18}\,\left[ \mathrm{\frac{V^{2}}{Hz}}\right]
+\end{equation}
+<p>Filling in the parameters gives:</p>
+\begin{equation}
+DesignMargin=23.44
+\end{equation}
+<li><a href="Assignment-5---Input-stage-design_Finding-optimum-with-different-widths.html">Finding optimum with different widths</a></li><li><a href="Assignment-5---Input-stage-design_Simulation-results.html">Simulation results</a></li><!-- INSERT --></ol>
 <div id="footnote">
 <p>Go to <a href="index.html">index</a></p>
 <p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
 <p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
-<p>Last project update: 2021-12-14 23:52:16</p>
+<p>Last project update: 2021-12-17 18:23:24</p>
 </div></body></html>

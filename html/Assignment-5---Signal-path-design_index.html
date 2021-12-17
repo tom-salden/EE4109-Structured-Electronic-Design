@@ -17,7 +17,10 @@
 <p>Next to the amplifier itself, negative feedback can be added. Advantages of using negative feedback are that the gain can be controlled precisely. In addition, choosing the correct feedback enables the amplifier to be resilient to ESD, which is one of the requirements.</p>
 <p>Like determined in the requirements, the innput antenna can be seen as an ideal voltage source with a capacitor in series to it. This means that either the voltage or the current of the input signal can be used. Next to the input, the output impedance of the amplifier should be fixed. Therefore, parameters A and B or C and D should be fixed.</p>
 <p>For the reason of simplicity and ESD protection, a single feedback loop is chosen and implemented as a capacitor from the output of the controller to the input of the controller, like shown in the following figure. Here, the parameters C and D are fixed.</p>
-<p>The total active antenna should have a gain of 1, so the value of the capacitor should have the value of $\ell * C_A$, so 0.5*1e-11 = 5.0 pF.</p>
+<p>The total active antenna should have a gain of 1, so the value of the feedback capacitor should have the value of $\ell * C_A$</p>
+\begin{equation}
+C_{F}=5.0 \cdot 10^{-12}\,\left[ \mathrm{F}\right]
+\end{equation}
 <figure><img src="img/topology.svg" alt="" style="width:800px">
 </figure>
 <h2>Total signal path topology</h2>
@@ -30,5 +33,5 @@
 <p>Go to <a href="index.html">index</a></p>
 <p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
 <p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
-<p>Last project update: 2021-12-14 23:52:16</p>
+<p>Last project update: 2021-12-17 18:23:24</p>
 </div></body></html>

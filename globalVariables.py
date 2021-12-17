@@ -6,6 +6,18 @@ Created on Tue Dec 14 17:25:55 2021
 """
 #Define global parameters used throughout the desing
 
-global l, Ca
-L_A = 0.5
-C_A = 10e-12
+L_A = 0.5           #Antenna length
+C_A = 10e-12        #Antenna capacitance
+C_F = L_A*C_A
+
+S_floor = 6.25e-18  #Noise floor at higher frequencies
+
+#Empty variables, filled in by scripts itself
+W_input = 0         #Width of the transistors of the DIFFERENTIAL PAIR
+L_input = 0         #Length of the transistors of the DIFFERENTIAL PAIR
+ID_input = 0        #Drain current of the DIFFERENTIAL PAIR
+
+Wn_output = 0       #Width of the push-pull stage NMOS
+Ln_output = 0       #Length of the push-pull stage NMOS
+Wp_output= 0        #Width of the push-pull stage PMOS
+Lp_output = 0       #Length fo the push-pull stage PMOS
