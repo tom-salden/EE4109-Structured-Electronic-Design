@@ -66,6 +66,7 @@ Cf = globalVariables.C_F
 Req = globalVariables.S_floor/(4*k*T*(1+globalVariables.L_A)**2)
 
 htmlPage('Finding optimum with different widths')
+text2html('Since an optimum can be discovered for the noise performance per transistor design, a list of widths have been evaluated to find the fitting lenghts and drain currents. From this, list, a final design can be selected.')
 
 for i in range(len(widths)):
     i1.defPar('W', stepArray[0][i])                     # Define a value for the width
@@ -142,6 +143,11 @@ figInoiseFinal = plotSweep('InoiseFinal', 'Inoise, L=300n, W=400u, ID=1.8m', res
 fig2html(figInoiseFinal, 800)
 Ciss = i1.getParValue('c_iss_XU1')
 
-text2html('Another advantage of this is that the $C_{iss}$ of the input transistor will decrease in value. When attempting a frequency compenstation with a phantom zero on the input, a smaller $C_{iss}$ will place the added pole further making sure that it is not dominant. The difference in capacitance is as follows:')
+text2html('Another advantage of this is that the $C_{iss}$ of the input transistor will decrease in value. When attempting a frequency compenstation with a phantom zero on the input, a smaller $C_{iss}$ will place the added pole further making sure that it is not dominant (or at least further away). The result is that the phantom zero compensation at the input will be more effective than when the capacitance is bigger. The difference in capacitance is as follows:')
 eqn2html('Cissbefore', CissTransistor[2])
 eqn2html('CurrentCiss', Ciss)
+
+text2html('Since this simulation is done for a single-CS stage, the designed values need to be adjusted if a differential pair is used. Like mentioned, a differential pair will have the same noise characteristics as a CS stage with transistors that are twice as wide and a drain current that is twice as high. This means that the differential pair will have the following parameters:')
+eqn2html('Width',W_input*2*1e6, 'um')
+eqn2html('Length',L_input*1e9, 'nm')
+eqn2html('I_D',ID_input*2*1e3, 'mA')

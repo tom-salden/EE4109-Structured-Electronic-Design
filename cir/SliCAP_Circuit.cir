@@ -1,0 +1,12 @@
+"Assignment 5 - Circuit analysis"
+* E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\SliCAP_Circuit.asc
+XU1 0 N003 N001 0 CMOS18ND W={W_DP} L={L_DP} ID={ID_DP}
+XU2 N002 N003 0 0 CMOS18PN W_N={W_N} L_N={L_N} ID_N={ID_N} W_P={W_P} L_P={L_P} ID_P={ID_P}
+E1 N005 0 N004 0 {L_A}
+V1 N004 0 V value={Vin} dc=0 dcvar=0 noise=0
+R1 out N002 {R1}
+R2 0 out {R2}
+C1 N001 N002 {C_F}
+C2 N001 N005 {C_A}
+.backanno
+.end

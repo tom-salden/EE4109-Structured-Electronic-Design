@@ -1,0 +1,12 @@
+"Assignment 5 - Circuit analysis"
+* E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\Assigment5_dual_stage_frequency.asc
+XU1 0 N002 N005 0 CMOS18ND W={W} L={L} ID={ID}
+E1 N004 0 N003 0 {L_A}
+C1 N005 N004 {C_A}
+C2 N001 N005 {C_F}
+XU3 N001 N002 0 0 CMOS18PN W_N={W_N} L_N={L_N} ID_N={ID_N} W_P={W_P} L_P={L_P} ID_P={ID_P}
+R1 out N001 {R_C}
+R2 0 out {R_C}
+V2 N003 0 V value={Vin} dc=0 dcvar=0 noise=0
+.backanno
+.end

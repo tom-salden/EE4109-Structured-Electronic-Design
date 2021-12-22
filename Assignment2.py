@@ -129,7 +129,7 @@ i1.setDetector('V_out');
 gainEKV = i1.execute()
 
 head2html('Symbolic expression of transimpedance')
-eqn2html('Z_t', normalizeLaplaceRational(gainEKV.laplace))
+eqn2html('Z_t', gainEKV.laplace)
 
 i1.setSimType('numeric');
 i1.setDataType('pz')
@@ -143,7 +143,7 @@ i1.setDetector('V_in');
 gainEKV = i1.execute()
 
 head2html('Symbolic expression of input impedance')
-eqn2html('Z_t', normalizeLaplaceRational(gainEKV.laplace))
+eqn2html('Z_t', gainEKV.laplace)
 
 i1.setSimType('numeric');
 i1.setDataType('pz')
