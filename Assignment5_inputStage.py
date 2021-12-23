@@ -51,7 +51,6 @@ i1.setDetector('V_out')
 i1.setSimType('numeric')
 i1.setGainType('vi')
 i1.setDataType('noise')
-result = i1.execute()
 
 # Prepare data for plotting with array stepping
 widths     = [900*10**(-6), 700*10**(-6), 600*10**(-6), 400*10**(-6)] # CS-stage NMOS channel widths (900u, 600u, 400u, 300u)
@@ -113,6 +112,7 @@ for i in range(len(widths)):
     noise2html(result)
     #print(i+1, ': W = {0:1.2e}, L = {1:1.2e}, ID = {2:1.2e}, S_f = {3:1.2e}, f_ell = {4:1.2e}, Ciss = {5:1.2e}, IC={6:1.2e}.'.format(W, L, ID, sp.N(sp.Subs(result.inoise, ini.frequency, 1e8),4), f_ell, Ciss, IC))
     CissTransistor[i] = Ciss
+    print(W,L,ID)
 
 htmlPage('Simulation results')
 head2html('Simulation results')
