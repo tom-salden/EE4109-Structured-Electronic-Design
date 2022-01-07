@@ -108,11 +108,9 @@ direct = i2.execute()
 
 htmlPage('Bode plots')
 head2html('Bode plots')
-text2html('Visible in the following bode plots is the frequency behaviour. The plot shows that the frequency behaviour of the amplifier is indeed flat until a frequency around $30 MHz$ is reached. This is still in line with the requirements.')
+text2html('Visible in the following bode plots is the frequency behaviour. The plot shows that the frequency behaviour of the amplifier is indeed flat until a frequency around $300 MHz$ is reached. This is still in line with the requirements.')
 result = [asymptotic, gain, loopgain, servo, direct]
 figdBmag = plotSweep('dBmag', 'dB magnitude', result, 10, 10e4, 100, sweepScale='M', funcType = 'dBmag', show=True)
 figPhase = plotSweep('phase', 'Phase', result, 10, 10e4, 100, sweepScale='M', funcType = 'phase', show=True)
 fig2html(figdBmag, 800)
 fig2html(figPhase, 800)
-
-#plotPZ
