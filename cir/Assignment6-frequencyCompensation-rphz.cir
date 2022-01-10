@@ -1,4 +1,4 @@
-"Assignment 6 - Frequency adjustments"
+"Assignment 6 - Bandwidth limitation"
 * E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\Assignment6-frequencyCompensation-rphz.asc
 XU1 0 N003 N001 0 CMOS18ND W={W_DP} L={L_DP} ID={ID_DP}
 XU2 N002 N003 0 0 CMOS18PN W_N={W_N} L_N={L_N} ID_N={ID_N} W_P={W_P} L_P={L_P} ID_P={ID_P}

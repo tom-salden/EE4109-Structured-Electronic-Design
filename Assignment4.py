@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This is a temporary script file.
-"""
 
 #from SLiCAP import *
 
@@ -41,12 +37,12 @@ text2html('Here n is the substrate factor which is for weak inversion equal to n
 
 text2html('First we plot the (differential) output load voltage of the stage.')
 img2html('DM.PNG', 1000)
-text2html('Here the quiescent current is swept between $100mA$ and $1A$. ')
+text2html('Here the bias voltage $V_{b}$ is swept between $100mV$ and $1V$. ')
 text2html('From this plot we want to obtain a linear transfer characteristics and to fulfill the drive capability.')
-text2html('The result for a  quiescent operating current of 300 $mA$ seems to give a good linear transfer, which means low crossover distortion also the 640 $mV$ requirement is met with this value.')
+text2html('The result for a bias voltage of 300 $mV$ seems to give a good linear transfer, which means low crossover distortion also the 640 $mV$ requirement is met with this value.')
 
 text2html('Below the simulation results of the provided test circuit (corresponsing to the circuit given above) is shown, here the common mode output current is plotted againt the input voltage.')
 img2html('CM_plot.PNG', 1000)
 
 text2html('For this plot it is important that there is no deadzone present, which leads to more distortion and a reduction in gain.')
-text2html('Again for the 300$mA$ there is no deadzone visible and the drive requirement of 3.2$mA$ is also met.')
+text2html('Again for the 300$mV$ there is no deadzone visible and the drive requirement of 3.2$mA$ is also met, from this figure we see that the quiescent operating current ($V_{in}=0$) is around $1.25mA$.')

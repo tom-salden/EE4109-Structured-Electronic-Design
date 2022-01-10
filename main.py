@@ -32,5 +32,5 @@ import Assignment4
 import Assignment5_signalPathDesign
 import Assignment5_inputStage
 import Assignment5_two_stage_analysis
-#import Assignment6_frequencyCompensation_inputPHZ
-#import Assignment6_biasing
+import Assignment6_frequencyCompensation_inputPHZ
+import Assignment6_biasing

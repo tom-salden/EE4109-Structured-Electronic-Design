@@ -27,18 +27,18 @@
 <p>First we plot the (differential) output load voltage of the stage.</p>
 <figure><img src="img/DM.PNG" alt="" style="width:1000px">
 </figure>
-<p>Here the quiescent current is swept between $100mA$ and $1A$. </p>
+<p>Here the bias voltage $V_{b}$ is swept between $100mV$ and $1V$. </p>
 <p>From this plot we want to obtain a linear transfer characteristics and to fulfill the drive capability.</p>
-<p>The result for a  quiescent operating current of 300 $mA$ seems to give a good linear transfer, which means low crossover distortion also the 640 $mV$ requirement is met with this value.</p>
+<p>The result for a bias voltage of 300 $mV$ seems to give a good linear transfer, which means low crossover distortion also the 640 $mV$ requirement is met with this value.</p>
 <p>Below the simulation results of the provided test circuit (corresponsing to the circuit given above) is shown, here the common mode output current is plotted againt the input voltage.</p>
 <figure><img src="img/CM_plot.PNG" alt="" style="width:1000px">
 </figure>
 <p>For this plot it is important that there is no deadzone present, which leads to more distortion and a reduction in gain.</p>
-<p>Again for the 300$mA$ there is no deadzone visible and the drive requirement of 3.2$mA$ is also met.</p>
+<p>Again for the 300$mV$ there is no deadzone visible and the drive requirement of 3.2$mA$ is also met, from this figure we see that the quiescent operating current ($V_{in}=0$) is around $1.25mA$.</p>
 <!-- INSERT --></ol>
 <div id="footnote">
 <p>Go to <a href="index.html">index</a></p>
 <p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
 <p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
-<p>Last project update: 2022-01-08 00:24:40</p>
+<p>Last project update: 2022-01-10 14:36:13</p>
 </div></body></html>

@@ -1,0 +1,26 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="Language" content="English"/>
+<title>"Nyquist plots to determine $R_{phz}$"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Nyquist plots to determine $R_{phz}$</h1></div>
+<figure><img src="img/polesGainPhZ1.svg" alt="" style="width:800px">
+</figure>
+<figure><img src="img/polesGainPhZ1zoom.svg" alt="" style="width:800px">
+</figure>
+<p>In these figures the nyquist diagram is shown of the amplifier, here the calculated value of $R_{phz}$ is equal to $18.5\Omega$ using the fllowing 2 equtions:</p>
+<p>$R_{phz}=\dfrac{1}{2\cdot \pi \cdot f_{phz} \cdot C_{A}}$</p>
+<p>$f_{phz} = \dfrac{B_{f}^{2}}{ \sqrt(2 B_{f}) + p_{1}+ p_{2}}$</p>
+<p>Here $p_{1}$ and $p_{2}$ are the 2 dominant poles of the circuit.</p>
+<p>In the nyquist plot the start value is set to $0.5 \cdot R_phz$ and this value is swept till $1.5 \cdot R_phz$ in 15 steps.</p>
+<p>From the plot we get for the 10th step a pole position at almost $45 ^{\circ}$ angle is reached which infers a MFM characteristic, this is thus at a value of $R_{phz}=13.81\Omega$.</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Assignment-5---Frequency-analysis_index.html">Assignment-5---Frequency-analysis_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2022-01-10 14:36:13</p>
+</div></body></html>

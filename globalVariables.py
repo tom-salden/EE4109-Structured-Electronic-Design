@@ -21,5 +21,5 @@ Wn_output = 100e-6       #Width of the push-pull stage NMOS
 Ln_output = 180e-9       #Length of the push-pull stage NMOS
 Wp_output= 350e-6        #Width of the push-pull stage PMOS
 Lp_output = 180e-9       #Length fo the push-pull stage PMOS
-ID_n = 300e-3            #Drain current of NMOS
-ID_p = 300e-3            #Drain current of PMOS
+ID_n = 1.25e-3            #Quiescent drain current of NMOS
+ID_p = -1.25e-3            #Quiescent drain current of PMOS

@@ -1,0 +1,34 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="Language" content="English"/>
+<title>"Bandwidth limitation with a phantom zero at the input"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Bandwidth limitation with a phantom zero at the input</h1></div>
+<h2>Bandwidth limitation with a phantom zero at the input</h2>
+<p>Even after frequency compensation, the bandwidth of the circuit is still too big, as the circuit has a cutoff frequency at around $1GHz$. By increasing the resistor value of the phantom zero at the input, the bandwidth can be limited somewhat.</p>
+<p>The reason this resistor allows for bandwidth limitation is that by increasing the value of the resistor, the pole created in the asymptotic gain and the zero created in the loopgain will move to a lower frequency. Next to this, the second pole is effected by the phantom zero resistance as well decreasing the loopgain poles product and thus the bandwidth.</p>
+<p>The followig figure shows the behaviour of the circuit when the resistor value is increased.</p>
+<figure><img src="img/BWL.svg" alt="" style="width:800px">
+</figure>
+<p>The requirements of the active antenna state that the -3dB frequency of the amplifier should be $30MHz$. Therefore, the compensation can be executed until the gain hits -9dB at $30MHz$. If the gain is zoomed in to the lower frequencies, it is visible that when the resistance is a little lower than $530 \Omega$, the requirement is met.</p>
+<figure><img src="img/BWLZoomed.svg" alt="" style="width:800px">
+</figure>
+<p>As already mentioned, the zero in the loopgain will move to a lower value. This can be seen in the plot of the loopgain in the following figure. The effect of moving the zero to a lower frequency is that there is more loopgain available for lower frequencies. This is beneficial as it can decrease the influence of distortion.</p>
+<figure><img src="img/BWLloopgain.svg" alt="" style="width:800px">
+</figure>
+<p>When a phantom zero resistance of $500 \Omega$ is chosen, it will give the following results:</p>
+<figure><img src="img/plot1name2.svg" alt="" style="width:800px">
+</figure>
+<h2>Drawbacks</h2>
+<p>A disadvantage of using this resistor for bandwidth limitation is that the resistor introduces noise. A resistor of $500 \Omega$ introduces $V_n=\sqrt{4kTR}=2.8nV/\sqrt{Hz}$. Since the noise floor should have a maximum of $2.5nV/\sqrt{Hz}$, this is too much. In addition, peaking around $3GHz$ is introduced. For that reason, bandwidth limitation using a phantom zero at the input is not used.</p>
+<p>The value of the resistor at the input will therefore have the value determined in Assignment 5, $13.81 \Omega$.</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Assignment-6---Bandwidth-limitation_index.html">Assignment-6---Bandwidth-limitation_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2022-01-10 14:36:13</p>
+</div></body></html>

@@ -1,0 +1,39 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="Language" content="English"/>
+<title>"Bandwidth limitation with a phantom zero at the output"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Bandwidth limitation with a phantom zero at the output</h1></div>
+<h2>Bandwidth limitation with a phantom zero at the output</h2>
+<p>Similar the phantom zero created at the input of the circuit, a phantom zero can be created at the output of the circuit as well. In contrast to a resistor used previously, the phantom zero is created by adding an inductor in series with the output of the stages. The circuit can be seen in</p>
+<figure><img src="img/Assignment6-frequencyCompensation-rlphz.svg" alt="" style="width:800px">
+</figure>
+<p>Like visible in the previous attempt on bandwidth limitation, the input phantom zero compensation was very effective. Unfortunately, when applying this technique peaking could easily occur at high frequencies. In addition, because of the use of a resistor, a lot of noise is added. To still limit the bandwidth, a different solution should be investigated. There are a lot of techniques to use for frequency compensation, however the methods other than phantom zero compensation create a non-ideality to limit the bandwidth. The phantom zero compensation uses an already present non-ideality and uses it to its advantage without affecting power usage or distortion too much. Therefore, phantom zero compensation is preferred as a method of bandwidth reduction. Because phantom zero compensation at the input of the amplifier is already applied and can not be increased a lot, phantom zero compensation at the output is still possible.</p>
+<p>By first compensating the circuit with a phantom zero resistance at its input, the magnitude bode plot looks like this:</p>
+<figure><img src="img/plot1name-RL.svg" alt="" style="width:800px">
+</figure>
+<p>Now, an inductor in series with the load can be placed to create a phantom zero a the output. By increasing this inductance, the bandwidth of the amplifier decreases</p>
+<figure><img src="img/BWL-RL.svg" alt="" style="width:800px">
+</figure>
+<p>The requirements of the active antenna state that the -3dB frequency of the amplifier should be $30MHz$. Therefore, the compensation can be executed until the gain hits -9dB at $30MHz$. If the gain is zoomed in to the lower frequencies, it is visible that when the inductance is a little lower than $0.53\mu H$, the requirement is met. At this value, there will be a little peaking, as visible in the previous plot. Therefore, if an inductance of around $0.4 \mu H$ is chosen, the bandwidth is still limited and the peaking is a little less.</p>
+<figure><img src="img/BWLZoomed-RL.svg" alt="" style="width:800px">
+</figure>
+<p>Just as for the input phantom zero compensation, the zero in the loopgain will move to a lower value. This can be seen in the plot of the loopgain in the following figure. The effect of moving the zero to a lower frequency is that there is more loopgain available for lower frequencies. This is beneficial as it can decrease the influence of distortion.</p>
+<figure><img src="img/BWLloopgain-RL.svg" alt="" style="width:800px">
+</figure>
+<p>When a phantom zero resistance of $20 \Omega$ is chosen and a phantom zero inductance of $0.4 \mu H$ is chosen, it will give the following results:</p>
+<figure><img src="img/plot1name2-RL.svg" alt="" style="width:800px">
+</figure>
+<figure><img src="img/plot1name3-RL.svg" alt="" style="width:800px">
+</figure>
+<p>Therfore, the conlcusion is that a phantom zero compensation at the input is added to compensate for the frequency behaviour and a phantom zero compensation at the output is added for bandwidth limitation. The value for the resistor is $13.81 \Omega$ and the value for the inductor is $0.4\mu H$.</p>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Assignment-6---Bandwidth-limitation_index.html">Assignment-6---Bandwidth-limitation_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2022-01-10 14:36:13</p>
+</div></body></html>
