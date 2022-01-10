@@ -1,0 +1,43 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="Language" content="English"/>
+<title>"Biasing of the circuit with current sources and floating sources"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Biasing of the circuit with current sources and floating sources</h1></div>
+<p>After determining the circuit performances in SLiCAP, a real implementation of the circuit has to be fabricated that can be simulated in programs like LTSpice. Correct biasing of the transistors is crucial for this step to ensure that the devices are in their correct operating regions. Some decisions have been made on how to bias the circuit:</p>
+<p>The common-mode voltage of the amplifier is $900 mV$. Therefore, the input and output of each state should read $900 mV$ with 0 signal input.</p>
+<h2>Biasing of the input stage</h2>
+<p>Like determined, the common mode voltage of the amplifier should be $900 mV$. Therefore, voltage at the input and output can be set at this level. In addition, the drain current through the transistors should be $3.6 mA$, therefore a sinking current source can be added that sinks 2x the drain current ($7.2 mA$).</p>
+<figure><img src="img/A6-InputBiasing-step1.svg" alt="" style="width:600px">
+</figure>
+<p>To complete the biasing, some logical deducions can be made. Since there should not be any output signal when there is no input signal, the gate voltage of M2 should equal the gate voltage of M1. In addition, the drain voltage of M1 should equal the drain voltage of M2. These voltages can be created by using voltage sources. Finally, the current needs to be divided equally between the two transistors. To force this division, a current souce at the output can be placed. This can be done because the input of the next stage has a high input impedance. The following image shows the biased input stage.</p>
+<figure><img src="img/A6-InputBiasing-step2.svg" alt="" style="width:600px">
+</figure>
+<h2>Biasing of the ouput stage</h2>
+<p>The biased output circuit has already been used in this project in <a href="Assignment-4---Complementary-parallel-CS-output-stage_index.html">Assignment 4 - Complementary-parallel CS output stage</a>. The biased circuit was used to determine the operating points of the transistors, therefore this design can be used in the biased circuit as well.</p>
+<figure><img src="img/A6-OutputBiasing.svg" alt="" style="width:600px">
+</figure>
+<h2>Biasing of the full circuit</h2>
+<p>The full circuit can now be implemented by using the biased input and output stages. One additional component is necessary, a resistor in the feedback loop. This resistor passes DC signal and feeds back the $900 mV$ from the output to the input of the amplifier, making sure that the common mode voltage is the same along the entire amplifier. In addition, to get rid of the common-mode voltage, a capacitor is placed in series before the output.</p>
+<figure><img src="img/BiasingStep1.svg" alt="" style="width:800px">
+</figure>
+<h2>Small signal dynamic response</h2>
+<figure><img src="img/mag_bias1.svg" alt="" style="width:800px">
+</figure>
+<figure><img src="img/phase_bias1.svg" alt="" style="width:800px">
+</figure>
+<h2>Noise behaviour</h2>
+<figure><img src="img/LTnoise_bias1.svg" alt="" style="width:800px">
+</figure>
+<h2>Drive capability</h2>
+<h2>Weak nonlinearity</h2>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Assignment-6---Biasing_index.html">Assignment-6---Biasing_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2022-01-10 14:36:13</p>
+</div></body></html>

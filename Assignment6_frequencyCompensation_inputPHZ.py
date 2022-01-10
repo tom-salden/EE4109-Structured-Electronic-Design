@@ -200,7 +200,7 @@ text2html('Just as for the input phantom zero compensation, the zero in the loop
 fig2html(figdBmagBWLL,800)
 text2html('When a phantom zero resistance of $20 \Omega$ is chosen and a phantom zero inductance of $0.4 \mu H$ is chosen, it will give the following results:')
 
-i1.defPar('Lphz', 3.4e-7)
+i1.defPar('Lphz', 4e-7)
 i1.stepOff()
 
 i1.setDataType('laplace')
@@ -223,3 +223,30 @@ fig2html(figdBmagfinalPhase,800)
 
 
 text2html('Therfore, the conlcusion is that a phantom zero compensation at the input is added to compensate for the frequency behaviour and a phantom zero compensation at the output is added for bandwidth limitation. The value for the resistor is $13.81 \Omega$ and the value for the inductor is $0.4\mu H$.')
+
+htmlPage('Pole analysis bandwidth limited antenna')
+text2html('Indeed another pole is visible in the PZ analysis and since the phantom zero does not only affect the bandwidth but also the frequency response, the quality factor is changed.')
+i1.setSimType('numeric')
+i1.setSource('V1')
+i1.setDetector('V_out')
+i1.setLGref('Gm_M1_XU1')
+
+i1.setGainType('loopgain')
+i1.setDataType('pz')
+pzResult = i1.execute()
+polesLoopGain = pzResult.poles
+
+i1.setDataType('laplace')
+loopgain = i1.execute()
+servoData = findServoBandwidth(loopgain.laplace)
+Bf = servoData['lpf']
+
+i1.setSimType('symbolic');
+i1.setGainType('gain');
+i1.setDataType('laplace');
+i1.setSource('V1');
+i1.setDetector('V_out');
+
+i1.setSimType('numeric');
+i1.setDataType('pz')
+pz2html(i1.execute())
