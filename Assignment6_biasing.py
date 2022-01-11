@@ -66,9 +66,12 @@ img2html('A6-OutputBiasing.svg',600)
 
 head2html('Biasing of the full circuit')
 text2html('The full circuit can now be implemented by using the biased input and output stages. One additional component is necessary, a resistor in the feedback loop. This resistor passes DC signal and feeds back the $900 mV$ from the output to the input of the amplifier, making sure that the common mode voltage is the same along the entire amplifier. In addition, to get rid of the common-mode voltage, a capacitor is placed in series before the output.')
-img2html('BiasingStep1.svg',800)
+img2html('BiasingStep1.svg',1000)
+
+text2html('The next step is to find out if the circuit actually behaves like expected and to see where the behaviour differs from the SLiCAP simulation. The following figures display the performance of this first step of the biased amplifier.')
 
 head2html('Small signal dynamic response')
+text2html('The following graphs display the bode plots of the SLiCAP simulation with the LTSpice simulation on top. Both traces are very similar and only at high frequencies, the simulations differ a little bit. At low frequencies, the LTSpice phase deviates a bit from the 180 degrees, unlike the SLiCAP simulation. The reason is that a capacitor is added at the output of the amplifier, causing an extra pole at low frequencies. If the value of the capacitor is decreased, this effect is enlarged and a drop in gain is visible as well.')
 LTmag_out, LTphase_out = LTspiceAC2SLiCAPtraces('BiasingStep1-ac.txt')
 
 mag_bias1 = plotSweep('mag_bias1', 'magnitude of the biased amplifier', gainEKV, 1e3, 10e9, 200, funcType = 'mag', show=True)
@@ -83,6 +86,7 @@ fig2html(phase_bias1, 800)
 
 
 head2html('Noise behaviour')
+text2html('The noise behaviour of the amplifier is more than adequate. At $10 kHz$, the noise requirement is $100 nV/Hz^{1/2}$. In this case, it is $22.5 nV/Hz^{1/2}$. At $100 kHz$, the requirements are $10 nV/Hz^{1/2}$. The amplifier is at $5 nV/Hz^{1/2}$. In addition, the requirement for noise floor of $5 nV/Hz^{1/2}$ is also met. This means that there is still some room left for the rest of the biasing steps.')
 LTnoise, empty = LTspiceDC2SLiCAPtraces('BiasingStep1-noise.txt')
 
 figLT_noise = plot('LTnoise_bias1', 'Noise simulation of the biased amplifier', 
@@ -91,28 +95,51 @@ figLT_noise = plot('LTnoise_bias1', 'Noise simulation of the biased amplifier',
 fig2html(figLT_noise, 800)
 
 head2html('Drive capability')
+text2html('The amplifier should be able to drive at least $316 mV$. By applying an input voltage that is too high, the maximum drive capability can be identified at the output. From this figure, it is clear that the amplifier is able to drive around $400 mV$, which is enough.')
+LTdrive, empty = LTspiceDC2SLiCAPtraces('BiasingStep1-driveCapabilities.txt')
+
+figLT_drive = plot('LTdrive_bias1', 'Transient simulation of the biased amplifier', 
+                'lin', LTdrive, xName='time', xUnits='s',
+                yName='$Output voltage$', yUnits = '$V$', show=True)
+fig2html(figLT_drive, 800)
 
 
 head2html('Weak nonlinearity')
+text2html('The weak nonlinearity is tested by applying 2 input signals, one at $10 MHz$ and one at $12 MHz$. The amplitude of both of the signals are half of the maximum input amplitude. The simulation is ran for $1600 ns$ and the maximum timestep is $1 ns$. The peaks of these signals have an amplitude of $-25 dB$, while the steady portion of the figure has an amplitude of $-76 dB$, which is slightly bigger than the necessary $50 dB$.')
+LTimd, empty = LTspiceAC2SLiCAPtraces('BiasingStep1-imd.txt', True)
 
+figLT_imd = plot('LTimd_bias1', 'Intermodular distortion of the biased amplifier', 
+                'semilogx', LTimd, xName='frequency', xUnits='Hz',
+                yName='$Signal strength$', yUnits = '$dB$', show=True)
+fig2html(figLT_imd, 800)
 
 htmlPage('Biasing of the circuit with implementation of floating sources')
 
 head2html('Implementation of floating sources')
+text2html('The next step of biasing is to swap out the floating voltage sources for transistor implementations. The following figure shows the chosen implementation to create floating sources.')
+
+img2html('BiasingFloatingSource.svg',800)
+
+head2html('Biased circuit')
+text2html('After implementation, the full circuit is shown in the following figure. One other change is that the voltage on the source of the first transistor of the differential pair is adjusted for the lower common-mode voltage after the differential pair. This has no drastic influences on the performance of the amplifier')
+
+img2html('BiasingStep2.svg',1000)
 
 head2html('Conclusion on amplifier performance')
+text2html('The performance of the amplifier is still within specs after creating the floating sources. The AC analysis barely changes, the noise performance has enough headroom for the added transistors and resistors and the amplifier can still drive around $400 mV$. There is a little more weak nonlinearity, but it still is within specifications as seen in the following figure.')
+
+LTimd, empty = LTspiceAC2SLiCAPtraces('BiasingStep2-imd.txt', True)
+
+figLT_imd = plot('LTimd_bias2', 'Intermodular distortion of the biased amplifier', 
+                'semilogx', LTimd, xName='frequency', xUnits='Hz',
+                yName='$Signal strength$', yUnits = '$dB$', show=True)
+fig2html(figLT_imd, 800)
 
 htmlPage('Biasing of the circuit with implementation of current sources')
+text2html('A current source is traditionally made with a current mirror. The same is used for this amplifier circuit. The following current mirror is used for the two current sources that are necessary')
+
+img2html('BiasingCurrentSource.svg', 800)
 
 head2html('Implementation of currents sources')
 
 head2html('Conclusion on amplifier performance')
-
-htmlPage('LTspice results')
-
-
-htmlPage('Comparision LTspice and SLiCAP')
-head2html('Small signal dynamic response')
-head2html('Noise behaviour')
-head2html('Drive capability')
-head2html('Weak nonlinearity')

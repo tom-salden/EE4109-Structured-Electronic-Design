@@ -8,11 +8,21 @@
 <script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head><body><div id="top"><h1>Biasing of the circuit with implementation of floating sources</h1></div>
 <h2>Implementation of floating sources</h2>
+<p>The next step of biasing is to swap out the floating voltage sources for transistor implementations. The following figure shows the chosen implementation to create floating sources.</p>
+<figure><img src="img/BiasingFloatingSource.svg" alt="" style="width:800px">
+</figure>
+<h2>Biased circuit</h2>
+<p>After implementation, the full circuit is shown in the following figure. One other change is that the voltage on the source of the first transistor of the differential pair is adjusted for the lower common-mode voltage after the differential pair. This has no drastic influences on the performance of the amplifier</p>
+<figure><img src="img/BiasingStep2.svg" alt="" style="width:1000px">
+</figure>
 <h2>Conclusion on amplifier performance</h2>
+<p>The performance of the amplifier is still within specs after creating the floating sources. The AC analysis barely changes, the noise performance has enough headroom for the added transistors and resistors and the amplifier can still drive around $400 mV$. There is a little more weak nonlinearity, but it still is within specifications as seen in the following figure.</p>
+<figure><img src="img/LTimd_bias2.svg" alt="" style="width:800px">
+</figure>
 <!-- INSERT -->
 <div id="footnote">
 <p>Go to <a href="Assignment-6---Biasing_index.html">Assignment-6---Biasing_index</a></p>
 <p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
 <p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
-<p>Last project update: 2022-01-10 23:16:09</p>
+<p>Last project update: 2022-01-11 20:21:15</p>
 </div></body></html>

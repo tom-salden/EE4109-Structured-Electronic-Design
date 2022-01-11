@@ -1,0 +1,18 @@
+* E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\Biasing\BiasingCurrentSource.asc
+M1 N002 N002 N003 substrateGround C18nmos l=360n w=35u m=4
+R1 N003 0 100
+R2 N001 N002 3.62k
+V1 N001 0 1.8
+V2 0 substrateGround 20m
+M2 N001 N002 N004 substrateGround C18nmos l=360n w=35u m=40
+R3 N004 0 10
+M3 N001 N002 N005 substrateGround C18nmos l=360n w=35u m=80
+R4 N005 0 5
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\tomsa\Documents\LTspiceXVII\lib\cmp\standard.mos
+.op
+.lib 'E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\CMOS18TT.lib'
+.lib 'C:\Program Files\LTC\LTspiceXVII\lib\cmp\log018.l' TT
+.backanno
+.end

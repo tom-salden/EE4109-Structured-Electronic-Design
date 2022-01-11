@@ -114,3 +114,4 @@ def LTspiceAC2SLiCAPtraces(fileName, dB=False, color='c'):
     LTphase.color = color
     traces = [{'LTmag': LTmag}, {'LTphase': LTphase}]
     return traces
+
