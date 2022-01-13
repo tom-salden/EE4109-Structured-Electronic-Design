@@ -28,11 +28,11 @@ head2html('Transimpedance')
 
 figLTmag_out = plot('LTmag-out', 'AC simulation magnitude charactersitics of the transimpedance', 
                 'log', LTmag_out, xName='frequency', xUnits='Hz',
-                yName='$V_{out}$', yUnits = '$\\Omega$', show=True)
+                yName='Magnitude', yUnits = '', show=True)
 
 figLTphase_out = plot('LTphase-out', 'AC simulation phase charactersitics of the transimpedance', 
                 'semilogx', LTphase_out, xName='frequency', xUnits='Hz',
-                yName='$arg(V_{out})$', yUnits = 'deg', show=True)
+                yName='Phase', yUnits = 'deg', show=True)
 
 # Place the plots on the HTML active page
 fig2html(figLTmag_out, 600, caption='LTspice AC analysis magnitude of $Z_t$.')
@@ -42,11 +42,11 @@ head2html('Input impedance')
 
 figLTmag_inp = plot('LTmag-inp', 'AC simulation magnitude charactersitics of the input impedance', 
                 'log', LTmag_inp, xName='frequency', xUnits='Hz',
-                yName='$V_{out}$', yUnits = '$\\Omega$', show=True)
+                yName='$Magnitude$', yUnits = '', show=True)
 
 figLTphase_inp = plot('LTphase-inp', 'AC simulation phase charactersitics of the input impedance', 
                 'semilogx', LTphase_inp, xName='frequency', xUnits='Hz',
-                yName='$arg(V_{out})$', yUnits = 'deg', show=True)
+                yName='$Phase$', yUnits = 'deg', show=True)
 
 # Place the plots on the HTML active page
 fig2html(figLTmag_inp, 600, caption='LTspice AC analysis magnitude of $Z_t$.')

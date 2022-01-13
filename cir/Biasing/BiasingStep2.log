@@ -34,21 +34,76 @@ Gmin = 2.70769e-013
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
+Semiconductor Device Operating Points:
+                        --- BSIM3 MOSFETS ---
+Name:        m12         m10         m4          m11         m9
+Model:     c18pmos     c18pmos     c18pmos     c18nmos     c18nmos
+Id:        2.02e-04    2.39e-04    1.10e-03    2.03e-04    2.39e-04
+Vgs:       5.66e-02    0.00e+00    3.01e-01    5.41e-01    5.41e-01
+Vds:       5.99e-01    5.42e-01    9.00e-01    5.96e-01    5.41e-01
+Vbs:       5.99e-01    5.42e-01    9.00e-01   -2.00e-02   -2.00e-02
+Vth:      -4.99e-01   -4.99e-01   -4.98e-01    4.86e-01    4.86e-01
+Vdsat:    -7.75e-02   -7.74e-02   -1.10e-01    7.20e-02    7.20e-02
+Gm:        3.78e-03    4.47e-03    1.63e-02    3.86e-03    4.57e-03
+Gds:       4.67e-05    6.00e-05    1.68e-04    6.96e-05    8.43e-05
+Gmb        1.15e-03    1.36e-03    4.93e-03    8.74e-04    1.03e-03
+Cbd:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cbs:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgsov:     1.19e-13    1.43e-13    2.38e-13    3.49e-14    4.19e-14
+Cgdov:     1.19e-13    1.43e-13    2.38e-13    3.49e-14    4.19e-14
+Cgbov:     7.02e-19    8.42e-19    1.40e-19    7.88e-19    9.46e-19
+dQgdVgb:   3.84e-13    4.61e-13    8.14e-13    1.19e-13    1.43e-13
+dQgdVdb:  -1.19e-13   -1.43e-13   -2.38e-13   -3.49e-14   -4.19e-14
+dQgdVsb:  -2.48e-13   -2.98e-13   -5.57e-13   -7.70e-14   -9.24e-14
+dQddVgb:  -1.71e-13   -2.05e-13   -3.67e-13   -5.30e-14   -6.36e-14
+dQddVdb:   1.19e-13    1.43e-13    2.38e-13    3.49e-14    4.19e-14
+dQddVsb:   6.87e-14    8.23e-14    1.69e-13    2.27e-14    2.73e-14
+dQbdVgb:  -4.20e-14   -5.03e-14   -8.07e-14   -1.34e-14   -1.60e-14
+dQbdVdb:   6.32e-18    1.48e-18    3.37e-17   -5.36e-18   -8.71e-18
+dQbdVsb:  -8.05e-15   -9.66e-15   -1.94e-14   -3.36e-15   -4.04e-15
 
-Date: Tue Jan 11 16:59:25 2022
-Total elapsed time: 0.427 seconds.
+Name:        m3          m2          m1
+Model:     c18nmos     c18nmos     c18nmos
+Id:        1.10e-03    3.60e-03    3.60e-03
+Vgs:       5.96e-01    6.45e-01    6.45e-01
+Vds:       9.00e-01    3.41e-01    3.40e-01
+Vbs:      -2.00e-02   -2.75e-01   -2.75e-01
+Vth:       4.86e-01    5.49e-01    5.49e-01
+Vdsat:     1.00e-01    9.83e-02    9.83e-02
+Gm:        1.61e-02    5.96e-02    5.96e-02
+Gds:       2.72e-04    5.63e-04    5.65e-04
+Gmb        3.56e-03    1.38e-02    1.38e-02
+Cbd:       0.00e+00    0.00e+00    0.00e+00
+Cbs:       0.00e+00    0.00e+00    0.00e+00
+Cgsov:     6.99e-14    5.59e-13    5.59e-13
+Cgdov:     6.99e-14    5.59e-13    5.59e-13
+Cgbov:     1.58e-19    2.78e-19    2.78e-19
+dQgdVgb:   2.50e-13    2.62e-12    2.62e-12
+dQgdVdb:  -6.99e-14   -5.60e-13   -5.60e-13
+dQgdVsb:  -1.68e-13   -1.93e-12   -1.93e-12
+dQddVgb:  -1.12e-13   -1.15e-12   -1.15e-12
+dQddVdb:   6.99e-14    5.61e-13    5.61e-13
+dQddVsb:   5.29e-14    7.36e-13    7.36e-13
+dQbdVgb:  -2.58e-14   -3.23e-13   -3.23e-13
+dQbdVdb:  -5.53e-18   -1.41e-15   -1.42e-15
+dQbdVsb:  -7.53e-15   -1.03e-13   -1.03e-13
+
+
+
+Date: Wed Jan 12 17:21:35 2022
+Total elapsed time: 0.250 seconds.
 
 tnom = 27
 temp = 27
-method = modified trap
-totiter = 3793
-traniter = 3368
-tranpoints = 1634
-accept = 1631
-rejected = 3
+method = trap
+totiter = 427
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
 matrix size = 25
-fillins = 5
+fillins = 4
 solver = Normal
-Matrix Compiler1: 1.39 KB object code size  0.5/0.3/[0.2]
-Matrix Compiler2: 2.12 KB object code size  0.4/0.3/[0.2]
+Matrix Compiler1:      79 opcodes
+Matrix Compiler2: off  [0.4]/0.7/2.0
 

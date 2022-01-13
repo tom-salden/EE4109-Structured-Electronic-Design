@@ -2,52 +2,56 @@ Circuit: * E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Desig
 
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
 Warning: Pd = 0 is less than W.
 Warning: Ps = 0 is less than W.
 Direct Newton iteration for .op point succeeded.
 Semiconductor Device Operating Points:
                         --- BSIM3 MOSFETS ---
-Name:        m3          m2          m1
-Model:     c18nmos     c18nmos     c18nmos
-Id:        7.20e-03    3.60e-03    3.34e-04
-Vgs:       5.57e-01    5.57e-01    5.59e-01
-Vds:       1.76e+00    1.76e+00    5.59e-01
-Vbs:      -5.60e-02   -5.60e-02   -5.34e-02
-Vth:       4.84e-01    4.84e-01    4.83e-01
-Vdsat:     7.96e-02    7.96e-02    8.12e-02
-Gm:        1.30e-01    6.52e-02    6.15e-03
-Gds:       3.46e-03    1.73e-03    2.72e-05
-Gmb        3.43e-02    1.71e-02    1.62e-03
-Cbd:       0.00e+00    0.00e+00    0.00e+00
-Cbs:       0.00e+00    0.00e+00    0.00e+00
-Cgsov:     1.96e-12    9.78e-13    9.78e-14
-Cgdov:     1.96e-12    9.78e-13    9.78e-14
-Cgbov:     2.70e-17    1.35e-17    1.35e-18
-dQgdVgb:   1.01e-11    5.03e-12    5.06e-13
-dQgdVdb:  -1.96e-12   -9.78e-13   -9.78e-14
-dQgdVsb:  -7.46e-12   -3.73e-12   -3.76e-13
-dQddVgb:  -4.30e-12   -2.15e-12   -2.16e-13
-dQddVdb:   1.96e-12    9.78e-13    9.79e-14
-dQddVsb:   3.03e-12    1.51e-12    1.53e-13
-dQbdVgb:  -1.47e-12   -7.35e-13   -7.31e-14
-dQbdVdb:   2.20e-17    1.10e-17   -4.95e-17
-dQbdVsb:  -5.46e-13   -2.73e-13   -2.78e-14
+Name:        m6          m5          m2          m1
+Model:     c18pmos     c18pmos     c18nmos     c18nmos
+Id:        3.61e-03    3.27e-04    7.20e-03    3.34e-04
+Vgs:       1.18e+00    0.00e+00    5.57e-01    5.59e-01
+Vds:       1.76e+00    5.84e-01    1.76e+00    5.59e-01
+Vbs:       1.80e+00    6.17e-01   -5.60e-02   -5.34e-02
+Vth:      -5.06e-01   -5.09e-01    4.84e-01    4.83e-01
+Vdsat:    -9.51e-02   -9.52e-02    7.96e-02    8.12e-02
+Gm:        5.95e-02    5.41e-03    1.30e-01    6.15e-03
+Gds:       3.93e-04    7.53e-05    3.46e-03    2.72e-05
+Gmb        1.77e-02    1.62e-03    3.43e-02    1.62e-03
+Cbd:       0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cbs:       0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgsov:     1.09e-12    1.09e-13    1.96e-12    9.78e-14
+Cgdov:     1.09e-12    1.09e-13    1.96e-12    9.78e-14
+Cgbov:     5.61e-18    5.61e-19    2.70e-17    1.35e-18
+dQgdVgb:   3.66e-12    3.66e-13    1.01e-11    5.06e-13
+dQgdVdb:  -1.09e-12   -1.09e-13   -1.96e-12   -9.78e-14
+dQgdVsb:  -2.46e-12   -2.46e-13   -7.46e-12   -3.76e-13
+dQddVgb:  -1.64e-12   -1.64e-13   -4.30e-12   -2.16e-13
+dQddVdb:   1.09e-12    1.09e-13    1.96e-12    9.79e-14
+dQddVsb:   7.24e-13    7.27e-14    3.03e-12    1.53e-13
+dQbdVgb:  -3.72e-13   -3.71e-14   -1.47e-12   -7.31e-14
+dQbdVdb:   2.04e-16   -1.79e-18    2.20e-17   -4.95e-17
+dQbdVsb:  -7.75e-14   -7.84e-15   -5.46e-13   -2.78e-14
 
 
 
-Date: Tue Jan 11 17:26:59 2022
-Total elapsed time: 0.153 seconds.
+Date: Wed Jan 12 16:47:12 2022
+Total elapsed time: 0.176 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 6
+totiter = 8
 traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 8
+matrix size = 12
 fillins = 0
 solver = Normal
-Matrix Compiler1: 372 bytes object code size
-Matrix Compiler2: 724 bytes object code size
+Matrix Compiler1: 464 bytes object code size
+Matrix Compiler2: 974 bytes object code size

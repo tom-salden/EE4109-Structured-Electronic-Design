@@ -171,20 +171,21 @@ figPolesSquare = plotPZ('polesGainPhZ1zoom', 'poles of the gain', i2.execute(), 
 htmlPage('Nyquist plots to determine $R_{phz}$')
 fig2html(figPolesAll, 800)
 fig2html(figPolesSquare, 800)
-text2html('In these figures the nyquist diagram is shown of the amplifier, here the calculated value of $R_{phz}$ is equal to $18.5\Omega$ using the fllowing 2 equtions:' )
+text2html('In these figures the nyquist diagram is shown of the amplifier, here the calculated value of $R_{phz}$ is equal to $11.89\Omega$ using the fllowing 2 equtions:' )
 text2html('$R_{phz}=\dfrac{1}{2\cdot \pi \cdot f_{phz} \cdot C_{A}}$')
 text2html('$f_{phz} = \dfrac{B_{f}^{2}}{ \sqrt(2 B_{f}) + p_{1}+ p_{2}}$')
 text2html('Here $p_{1}$ and $p_{2}$ are the 2 dominant poles of the circuit.')
 
 text2html('In the nyquist plot the start value is set to $0.5 \cdot R_phz$ and this value is swept till $1.5 \cdot R_phz$ in 15 steps.')
-text2html('From the plot we get for the 10th step a pole position at almost $45 ^{\circ}$ angle is reached which infers a MFM characteristic, this is thus at a value of $R_{phz}=13.81\Omega$.')
+text2html('From the plot we get for the 10th step a pole position at almost $45 ^{\circ}$ angle is reached which infers a MFM characteristic, this is thus at a value of $R_{phz}=13.9\Omega$.')
 i2.stepOff()
+print(R_phz)
 
 htmlPage('Pole analysis compensated antenna')
 
-i2.defPar('R_phz', 13.81)
+i2.defPar('R_phz', 13.9)
 
-text2html('Now the value of $13.81\Omega$ is substituted in $R_{phz}$ and a frequency analysis is run again. Below the locations of the new poles and zeros is shown and the Q factor.')
+text2html('Now the value of $13.9\Omega$ is substituted in $R_{phz}$ and a frequency analysis is run again. Below the locations of the new poles and zeros is shown and the Q factor.')
 text2html('Now the Q factor is almost excatly at 0.707 for a MFM characteristic as intended, in the next page the bode plot is shown where the (almost) flat passband transfer is shown.')
 
 i2.setSimType('numeric')

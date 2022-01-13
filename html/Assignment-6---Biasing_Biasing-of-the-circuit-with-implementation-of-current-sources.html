@@ -7,15 +7,18 @@
 <script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
 <script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head><body><div id="top"><h1>Biasing of the circuit with implementation of current sources</h1></div>
-<p>A current source is traditionally made with a current mirror. The same is used for this amplifier circuit. The following current mirror is used for the two current sources that are necessary</p>
+<h2>Implementation of currents sources</h2>
+<p>A current source is traditionally made with a current mirror. The same is used for this amplifier circuit. The following current mirror is used for the two current sources that are necessary. In the ciruit there are two kinds of current sources used. One source supplies current to one of the branches of the differential pair and the other current source sinks current. Therefore, two different current sources need to be designed. One current source that sources $3.6mA$ to the differential pair and one that sinks $7.2mA$ from the stage to ground. The following figure shows the implementation of the two sources.</p>
 <figure><img src="img/BiasingCurrentSource.svg" alt="" style="width:800px">
 </figure>
-<h2>Implementation of currents sources</h2>
-<h2>Conclusion on amplifier performance</h2>
+<h2>Full circuit</h2>
+<figure><img src="img/BiasingStep3.svg" alt="" style="width:1000px">
+</figure>
+<p>The circuit in this figure is the biased amplifier with the implemented current sources. Some fine-tuning was necessary for the sources to fit in the circuit, so the sizing has been adjusted in comparison to the figure above. In addition, some resistors are omitted due to the noise floor limit. The current sources add a relatively big amount of input-referred noise, therefore careful tuning was necessary to stick to the limit. The performance of this circuit will be discussed in the next section</p>
 <!-- INSERT -->
 <div id="footnote">
 <p>Go to <a href="Assignment-6---Biasing_index.html">Assignment-6---Biasing_index</a></p>
 <p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
 <p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
-<p>Last project update: 2022-01-11 20:21:15</p>
+<p>Last project update: 2022-01-13 15:43:33</p>
 </div></body></html>

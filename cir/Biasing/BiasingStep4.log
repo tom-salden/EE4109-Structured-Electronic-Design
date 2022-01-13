@@ -1,0 +1,143 @@
+Circuit: * E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\Biasing\BiasingStep4.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Semiconductor Device Operating Points:
+                        --- BSIM3 MOSFETS ---
+Name:        m8          m7          m12         m10         m4
+Model:     c18pmos     c18pmos     c18pmos     c18pmos     c18pmos
+Id:        3.60e-03    1.41e-03    2.02e-04    2.39e-04    1.10e-03
+Vgs:      -4.55e-01    0.00e+00    5.65e-02    0.00e+00    3.12e-01
+Vds:       1.20e+00    1.66e+00    5.98e-01    5.42e-01    9.11e-01
+Vbs:       1.20e+00    1.66e+00    5.98e-01    5.42e-01    9.11e-01
+Vth:      -4.16e-01   -4.15e-01   -4.99e-01   -4.99e-01   -4.98e-01
+Vdsat:    -9.87e-01   -9.88e-01   -7.75e-02   -7.74e-02   -1.10e-01
+Gm:        5.08e-03    2.00e-03    3.78e-03    4.47e-03    1.63e-02
+Gds:       1.58e-04    3.38e-05    4.67e-05    6.00e-05    1.67e-04
+Gmb        1.86e-03    7.28e-04    1.15e-03    1.36e-03    4.93e-03
+Cbd:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cbs:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgsov:     7.08e-14    2.72e-14    1.19e-13    1.43e-13    2.38e-13
+Cgdov:     7.08e-14    2.72e-14    1.19e-13    1.43e-13    2.38e-13
+Cgbov:     1.92e-18    9.60e-19    7.02e-19    8.42e-19    1.40e-19
+dQgdVgb:   8.31e-13    3.19e-13    3.84e-13    4.61e-13    8.14e-13
+dQgdVdb:  -7.08e-14   -2.67e-14   -1.19e-13   -1.43e-13   -2.38e-13
+dQgdVsb:  -7.61e-13   -2.93e-13   -2.48e-13   -2.98e-13   -5.57e-13
+dQddVgb:  -3.52e-13   -1.35e-13   -1.71e-13   -2.05e-13   -3.67e-13
+dQddVdb:   7.13e-14    2.70e-14    1.19e-13    1.43e-13    2.38e-13
+dQddVsb:   3.72e-13    1.43e-13    6.87e-14    8.23e-14    1.69e-13
+dQbdVgb:  -1.27e-13   -4.91e-14   -4.20e-14   -5.03e-14   -8.07e-14
+dQbdVdb:  -1.06e-15   -9.78e-18    6.31e-18    1.48e-18    3.43e-17
+dQbdVsb:  -5.42e-14   -2.08e-14   -8.05e-15   -9.66e-15   -1.94e-14
+
+Name:        m6          m5          m11         m9          m3
+Model:     c18nmos     c18nmos     c18nmos     c18nmos     c18nmos
+Id:        7.21e-03    1.23e-03    2.03e-04    2.39e-04    1.10e-03
+Vgs:       5.45e-01    5.45e-01    5.41e-01    5.41e-01    5.96e-01
+Vds:       2.63e-01    5.45e-01    5.96e-01    5.41e-01    8.89e-01
+Vbs:      -2.00e-02   -2.00e-02   -2.00e-02   -2.00e-02   -2.00e-02
+Vth:       4.17e-01    4.17e-01    4.86e-01    4.86e-01    4.86e-01
+Vdsat:     1.08e-01    1.08e-01    7.20e-02    7.20e-02    1.00e-01
+Gm:        1.07e-01    1.82e-02    3.86e-03    4.57e-03    1.60e-02
+Gds:       6.98e-04    4.25e-05    6.96e-05    8.43e-05    2.73e-04
+Gmb        3.00e-02    5.13e-03    8.74e-04    1.03e-03    3.56e-03
+Cbd:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cbs:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgsov:     2.91e-12    4.89e-13    3.49e-14    4.19e-14    6.99e-14
+Cgdov:     2.91e-12    4.89e-13    3.49e-14    4.19e-14    6.99e-14
+Cgbov:     1.17e-17    1.96e-18    7.88e-19    9.46e-19    1.58e-19
+dQgdVgb:   3.39e-11    5.67e-12    1.19e-13    1.43e-13    2.50e-13
+dQgdVdb:  -3.01e-12   -4.91e-13   -3.49e-14   -4.19e-14   -6.99e-14
+dQgdVsb:  -2.89e-11   -4.85e-12   -7.70e-14   -9.24e-14   -1.68e-13
+dQddVgb:  -1.41e-11   -2.36e-12   -5.30e-14   -6.36e-14   -1.12e-13
+dQddVdb:   3.00e-12    4.91e-13    3.49e-14    4.19e-14    6.99e-14
+dQddVsb:   1.47e-11    2.46e-12    2.27e-14    2.73e-14    5.29e-14
+dQbdVgb:  -5.58e-12   -9.54e-13   -1.34e-14   -1.60e-14   -2.58e-14
+dQbdVdb:  -8.82e-14   -1.38e-15   -5.35e-18   -8.71e-18   -5.79e-18
+dQbdVsb:  -3.38e-12   -5.59e-13   -3.36e-15   -4.04e-15   -7.53e-15
+
+Name:        m2          m1
+Model:     c18nmos     c18nmos
+Id:        3.60e-03    3.61e-03
+Vgs:       6.37e-01    6.26e-01
+Vds:       3.32e-01    1.54e+00
+Vbs:      -2.83e-01   -2.83e-01
+Vth:       5.54e-01    5.54e-01
+Vdsat:     9.14e-02    8.55e-02
+Gm:        6.30e-02    6.33e-02
+Gds:       7.91e-04    9.10e-04
+Gmb        1.40e-02    1.42e-02
+Cbd:       0.00e+00    0.00e+00
+Cbs:       0.00e+00    0.00e+00
+Cgsov:     5.59e-13    5.59e-13
+Cgdov:     5.59e-13    5.59e-13
+Cgbov:     2.28e-19    2.28e-19
+dQgdVgb:   2.33e-12    2.30e-12
+dQgdVdb:  -5.60e-13   -5.59e-13
+dQgdVsb:  -1.65e-12   -1.61e-12
+dQddVgb:  -1.03e-12   -1.01e-12
+dQddVdb:   5.60e-13    5.59e-13
+dQddVsb:   5.83e-13    5.64e-13
+dQbdVgb:  -2.71e-13   -2.76e-13
+dQbdVdb:  -1.05e-15   -9.84e-19
+dQbdVsb:  -7.62e-14   -7.27e-14
+
+
+
+Date: Thu Jan 13 15:58:15 2022
+Total elapsed time: 0.263 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 449
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 27
+fillins = 4
+solver = Normal
+Matrix Compiler1:      89 opcodes
+Matrix Compiler2:     188 opcodes  0.3/[0.3]/0.8
+

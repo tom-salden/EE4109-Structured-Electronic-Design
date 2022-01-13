@@ -127,7 +127,7 @@ figInoise = plotSweep('Inoise', 'Source-referred noise spectrum', result, 1e3, 1
 fig2html(figInoise, 800)
 stepArray2html(i1.stepVars, i1.stepArray)
 
-text2html('This figure gives the optimal value of the noise performance of the input stage. Indeed, the noise floor is below $6.25 \times 10^{-18} \dfrac{V^2}{Hz}$, but this value is barely reached. On the other hand, the 1/f (or 1/f^2) noise easily meets the requirements. To give more headroom to the noise floor, different transistor parameters can be chosen. If the length of the transistor is decreased along with the drain current, the 1/f cutoff frequency will shift to a higher cutoff point and the noise floor will move down. Therefore, a transistor with the following parameters is used to give more headroom.')
+text2html('This figure gives the optimal value of the noise performance of the input stage. Indeed, the noise floor is below $6.25 \cdot 10^{-18} \dfrac{V^2}{Hz}$, but this value is barely reached. On the other hand, the 1/f (or 1/f^2) noise easily meets the requirements. To give more headroom to the noise floor, different transistor parameters can be chosen. If the length of the transistor is decreased along with the drain current, the 1/f cutoff frequency will shift to a higher cutoff point and the noise floor will move down. Therefore, a transistor with the following parameters is used to give more headroom.')
 
 # Final settings
 L_input = 300*10**(-9)  #300n

@@ -1,0 +1,39 @@
+<a id=""></a><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="Language" content="English"/>
+<title>"Final biased circuit"</title><link rel="stylesheet" href="css/slicap.css">
+<script>MathJax = {tex:{tags: 'ams', inlineMath:[['$','$'],]}, svg:{fontCache:'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head><body><div id="top"><h1>Final biased circuit</h1></div>
+<h2>Final structured circuit</h2>
+<figure><img src="img/BiasingStep4.svg" alt="" style="width:1000px">
+</figure>
+<p>Now all floating voltage sources and current sources are replaced by transistor implementations, the circuit is fully biased to the point that it can be powered with several voltage sources. The figure shown here is the restructured schematic of the biased circuit displayed in the previous section.</p>
+<p>Finally, the circuit is tested with the same simulations as the unbiased circuit. This is done to make sure the biasing did not introduce unwanted effects.</p>
+<h2>Small signal dynamic response</h2>
+<p>The AC-analysis of the circuit is not changed visibly from the circuit biased with ideal sources, therefore the circuit still behaves as is expected.</p>
+<figure><img src="img/mag_bias3.svg" alt="" style="width:800px">
+</figure>
+<figure><img src="img/phase_bias3.svg" alt="" style="width:800px">
+</figure>
+<h2>Noise behaviour</h2>
+<p>Like mentioned in the previous section, the implementation of the current sources introduced a relatively big amount of noise. However, the final circuit still abides to the requirements. The most critical point is at $1 MHz$, where the noise is required to be $5 nV/mHz^{1/2}$. The final value is just below this requirement. One method of decreasing this noise is to resize the input stage. If the length and drain current are decreased, the noise floor drops. However, it is not necessary for this design.</p>
+<figure><img src="img/LTnoise_bias3.svg" alt="" style="width:800px">
+</figure>
+<h2>Drive capability</h2>
+<p>Similarly to the circuit biased wit ideal sources, this circuit is able to drive the load up to about $400mV$, which is sufficient for the requirements.</p>
+<figure><img src="img/LTdrive_bias3.svg" alt="" style="width:800px">
+</figure>
+<h2>Weak nonlinearity</h2>
+<p>Finally, the weak nonlinearity did not change significantly since adding the floating voltage sources. This means that the requirements are still met for this part.</p>
+<figure><img src="img/LTimd_bias3.svg" alt="" style="width:800px">
+</figure>
+<!-- INSERT -->
+<div id="footnote">
+<p>Go to <a href="Assignment-6---Biasing_index.html">Assignment-6---Biasing_index</a></p>
+<p>SLiCAP: Symbolic Linear Circuit Analysis Program, Version 1.0 &copy 2009-2021 SLiCAP development team</p>
+<p>For documentation, examples, support, updates and courses please visit: <a href="http://www.analog-electronics.eu">analog-electronics.eu</a></p>
+<p>Last project update: 2022-01-13 15:43:33</p>
+</div></body></html>

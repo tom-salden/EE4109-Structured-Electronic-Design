@@ -1,0 +1,54 @@
+* E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\Biasing\BiasingStep4.asc
+V1 N017 P001 SINE(0 {V_in} 5meg 0 0 0) AC 1 0
+E1 N015 0 N017 0 {L_A}
+C1 N016 N015 {C_A}
+R1 N001 N016 {Rphz}
+V2 N003 0 1.8
+V3 N004 0 900m
+M1 N003 N001 N014 substrateGround C18nmos l={L_DP} w={W_DP}
+M2 N009 N004 N014 substrateGround C18nmos l={L_DP} w={W_DP}
+M3 N002 N009 0 substrateGround C18nmos l={L_N} w={W_N}
+M4 N005 N008 N002 N005 C18pmos l={L_P} w={W_P}
+V6 N005 0 1.8
+C2 N002 N001 {C_F}
+R2 N002 N001 500Meg
+R3 N010 N002 {R_L}
+C3 Out N011 10u
+R4 Out 0 {R_L}
+V7 0 substrateGround 20m
+L1 N011 N010 {Lphz}
+V8 P001 0 SINE(0 0 12.5meg 0 0 0) AC 0 0
+M9 N013 N013 0 substrateGround C18nmos l={LN_vol} w={WN_vol} m=6
+M10 N005 N007 N007 N005 C18pmos l={LP_vol} w={WP_vol} m=6
+R8 N007 N013 {R_vol}
+C4 N008 N009 5p
+M11 N009 N013 0 substrateGround C18nmos l={LN_vol} w={WN_vol} m=5
+M12 N005 N007 N008 N005 C18pmos l={LP_vol} w={WP_vol} m=5
+R5 N008 N009 {R_vol}
+M5 N012 N012 0 substrateGround C18nmos l={L1_cur1} w={W1_cur1} m={M1_cur1}
+R7 N005 N012 {R_cur1}
+M6 N014 N012 0 substrateGround C18nmos l={L2_cur1} w={W2_cur1} m={M2_cur1}
+R10 N006 0 {R_cur2}
+M7 N005 N006 N006 N005 C18pmos l={L1_cur2} w={W1_cur2} m={M1_cur2}
+M8 N005 N006 N009 N005 C18pmos l={L2_cur2} w={W2_cur2} m={M2_cur2}
+C5 N012 0 100n
+C6 N006 0 100n
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\tomsa\Documents\LTspiceXVII\lib\cmp\standard.mos
+.param L_A=0.5 C_A=10e-12 C_F=5e-12 R_L=50
+.param Rphz=13.81 Lphz=0.4u
+.param L_DP=250n W_DP=800u ID_DP=3m
+.param L_N=180n L_P=180n W_N=100u W_P=350u
+.op
+.lib 'E:\Universiteit\Master\7 Q2 - 2021\EE4109-Structured-Electronic-Design\cir\CMOS18TT.lib'
+.lib 'C:\Program Files\LTC\LTspiceXVII\lib\cmp\log018.l' TT
+.param V_in=2
+;tran 0 800n 0 1n
+.ac dec 20 1k 10G
+;noise V(out) V1 dec 20 10k 30Meg
+.param LN_vol=180n LP_vol=180n WN_vol=10u WP_vol=35u R_vol=3k
+.param L1_cur1=1u W1_cur1=350u L2_cur1=1u W2_cur1=347u M1_cur1=2 M2_cur1=12 R_cur1=1020
+.param L1_cur2=1u W1_cur2=40u L2_cur2=1u W2_cur2=52u M1_cur2=1 M2_cur2=2 R_cur2=100
+.backanno
+.end

@@ -44,7 +44,7 @@ text2html('From these result the effect of increasing the width of the transisto
 
 htmlPage('Characterisation of chosen parameters')
 head2html('$f_{T} vs I_{D}$')
-text2html('Next is obtaining a plot of $f_{T} vs I_{D}$. Therefore the $f_{T}$ testbench is used using the obtained values for $V_{D}, M, L$ and running the simulation from $0mA$ to $3.2mA$. Now adding the $100\Omega$ load in series with $V_{D}$ and running the simulation gives the following plot for $f_{T}$.')
+text2html('Next is obtaining a plot of $f_{T} vs I_{D}$. Therefore the $f_{T}$ testbench is used using the obtained values for $V_{D}, M, L$ and running the simulation from $0mA$ to $6.4mA$. Now adding the $100\Omega$ load in series with $V_{D}$ and running the simulation gives the following plot for $f_{T}$.')
 
 LTft, empty = LTspiceDC2SLiCAPtraces('NMOS-fT-testbench.log.txt')
 
