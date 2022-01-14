@@ -10,6 +10,10 @@ makeNetlist('emptyCircuit.asc', 'Design Overview')
 i1 = instruction()
 i1.setCircuit('emptyCircuit.cir')
 
+head2html('Source code')
+text2html('The source code for this design can be found on GitHub, located on this page: <a href="https://github.com/tom-salden/EE4109-Structured-Electronic-Design">https://github.com/tom-salden/EE4109-Structured-Electronic-Design</a>')
+text2html('In addition, a github.io page is created that directly displays the html pages from the previous <a href="https://tom-salden.github.io/EE4109-Structured-Electronic-Design/html/index.html">https://tom-salden.github.io/EE4109-Structured-Electronic-Design/html/index.html</a>')
+
 head2html('Active antenna')
 img2html('activeAntennaAssignment.svg', 800)
 text2html('An active whip antenna is located far from its connected radio receiver. The signal from the antenna is too weak for the receiver, therefore, an amplifier is necessary. The amplifier will be based on CMOS180 technology and will consist of MOSFETS. There are some requirements given for the amplifier so the antenna can be amplified properly.')
